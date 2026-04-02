@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https:                                                                                                                                                
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https:                                                                
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                                            
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+                               
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-[0_8px_24px_rgba(0,52,111,0.06)] h-20">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-blue-900" style="font-size: 28px;">school</span>
+                <span class="text-xl font-extrabold text-blue-900 tracking-tighter font-headline">Minyong City Model Schools</span>
+            </div>
+            <!-- ... (rest of your code) -->
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Academic Hero Section -->
+        <section class="relative w-full bg-primary overflow-hidden py-24 md:py-32">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-surface-tint to-transparent"></div>
+            <div class="max-w-7xl mx-auto px-8 relative z-10 flex flex-col items-start">
+                <div class="inline-block px-4 py-1 rounded-full bg-primary-container text-on-primary-container font-label text-xs font-bold tracking-widest mb-6">ADMISSIONS <span class="year-range">2024/2025</span></div>
+                <!-- ... (rest of your code) -->
+            </div>
+        </section>
+        <!-- ... (rest of your code) -->
+    </main>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.addEventListener("DOMContentLoaded", () => {
+            const yearElements = document.querySelectorAll('.year-range');
+            yearElements.forEach(el => {
+                el.innerText = `${currentYear}/${currentYear + 1}`;
+            });
+        });
+    </script>
+</body>
+  </html>
+      
