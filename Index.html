@@ -1,271 +1,156 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Elite Division - Match Setup</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "background": "#121416",
-                        "on-tertiary-container": "#838484",
-                        "on-surface": "#e2e2e5",
-                        "on-surface-variant": "#c4c6cf",
-                        "on-primary-fixed": "#161e00",
-                        "on-error": "#690005",
-                        "surface-bright": "#37393b",
-                        "on-primary": "#283500",
-                        "error": "#ffb4ab",
-                        "on-tertiary-fixed-variant": "#454747",
-                        "surface-container-low": "#1a1c1e",
-                        "inverse-on-surface": "#2f3133",
-                        "on-secondary-container": "#a0b6e0",
-                        "tertiary-fixed": "#e2e2e2",
-                        "surface-dim": "#121416",
-                        "inverse-primary": "#506600",
-                        "on-secondary": "#193053",
-                        "primary-container": "#161e00",
-                        "on-tertiary-fixed": "#1a1c1c",
-                        "inverse-surface": "#e2e2e5",
-                        "on-background": "#e2e2e5",
-                        "primary-fixed-dim": "#abd600",
-                        "surface": "#121416",
-                        "secondary": "#b1c7f2",
-                        "primary": "#abd600",
-                        "surface-container-lowest": "#0c0e10",
-                        "tertiary": "#c6c6c7",
-                        "on-primary-fixed-variant": "#3c4d00",
-                        "surface-variant": "#333537",
-                        "on-error-container": "#ffdad6",
-                        "surface-container": "#1e2022",
-                        "on-secondary-fixed-variant": "#31476b",
-                        "surface-container-highest": "#333537",
-                        "surface-container-high": "#282a2c",
-                        "secondary-fixed-dim": "#b1c7f2",
-                        "tertiary-fixed-dim": "#c6c6c7",
-                        "outline-variant": "#44474e",
-                        "outline": "#8e9099",
-                        "on-tertiary": "#2f3131",
-                        "secondary-fixed": "#d6e3ff",
-                        "primary-fixed": "#c3f400",
-                        "on-secondary-fixed": "#001b3d",
-                        "secondary-container": "#31476b",
-                        "error-container": "#93000a",
-                        "tertiary-container": "#1a1c1c",
-                        "surface-tint": "#abd600",
-                        "on-primary-container": "#718e00"
-                    },
-                    fontFamily: {
-                        "headline": ["Space Grotesk"],
-                        "body": ["Manrope"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-                },
-            },
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minyong City Model Schools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-    </script>
-<style>.material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
-    }
-.velocity-angle {
-    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%)
-    }
-.stadium-bg {
-    background-image: linear-gradient(to bottom, rgba(18, 20, 22, 0.4), rgba(18, 20, 22, 1)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuBBon42lqSoPLw-SJqIMTLTfYoBlK1ZuPv8uUAx1drIGAu7qby1GxsfkQNvt6GlRBQjYSua4adswgS2Z4K_V3jRVHryki50nc7xzmOYU24eZfmU9DQEyZt2ggkoNEPLnNLFnQJDWi3jMLrg89fT_T5mkbrs3ZUWPK3kGLU9lBvqHwFVWgriiwsX8tQ27Zr9bsqWeQXCwxBaBMEMoM7MSgw68gsIcZt1muKGCU8J80sSVUVhq0F0-imSWTqy4olbC901FInoX2clJ_Q);
-    background-size: cover;
-    background-position: center
-    }</style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
-<!-- TopAppBar -->
-<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#121416]/60 backdrop-blur-xl shadow-[0_40px_40px_-10px_rgba(0,0,0,0.4)]">
-<div class="flex items-center gap-4">
-<div class="relative w-10 h-10">
-<img alt="Profile" class="w-full h-full object-cover rounded-sm border border-primary/20" data-alt="Close-up portrait of a determined young athlete with short hair in a professional studio setting with dark blue backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhY5anHhqoVJoyjVNzpdxb3CIn9K_adjtLeqENLk8fU9IkKe-wLzQyhr1tHZZhL6yj3eGfEYyvu_t8DY5wrEP7aPVIKjyr2tLEaDt8--2M1o4pD3qoW_V7y6W4PHkv9o823I7XaL2_XLbSbPEGJZDWvfCSMPEZp2YvfVDhh1bWrq8IeL6cAx1tvvpUJL-pzcxaKyRa2hBlqKF4RC4Z7ngwJQr2UTiSSITw41mK55LKTNhl1i_EpS7i_-QidWyKTQYuIZ3HClHkjdo"/>
-<div class="absolute -bottom-1 -right-1 bg-primary text-on-primary text-[8px] font-black px-1 rounded-sm">LVL 42</div>
-</div>
-<h1 class="font-headline uppercase tracking-tighter text-xl font-bold text-[#abd600] italic tracking-widest">ELITE DIVISION</h1>
-</div>
-<nav class="hidden md:flex gap-8">
-<a class="font-headline uppercase text-sm tracking-widest text-[#abd600] border-b-2 border-[#abd600] pb-1 transition-all duration-300" href="#">Matches</a>
-<a class="font-headline uppercase text-sm tracking-widest text-[#e2e2e5]/70 hover:bg-[#37393b] px-2 transition-all duration-300" href="#">Squad</a>
-<a class="font-headline uppercase text-sm tracking-widest text-[#e2e2e5]/70 hover:bg-[#37393b] px-2 transition-all duration-300" href="#">Shop</a>
-</nav>
-<div class="flex items-center gap-4 font-headline text-xs font-bold text-[#abd600]">
-<span class="bg-surface-container-high px-3 py-1 rounded-sm">1,250,000 GP</span>
-<span class="bg-surface-container-high px-3 py-1 rounded-sm text-secondary">500 COINS</span>
-</div>
-</header>
-<!-- Main Content Canvas -->
-<main class="min-h-screen pt-24 pb-32 px-6 stadium-bg relative">
-<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
-<!-- Left: Mode Selection -->
-<section class="lg:col-span-4 space-y-6">
-<div class="space-y-1">
-<span class="text-primary font-headline text-xs uppercase tracking-[0.2em] font-black">Tactical Entry</span>
-<h2 class="text-5xl font-headline font-black uppercase tracking-tighter leading-none italic">Match<br/>Lobby</h2>
-</div>
-<div class="flex flex-col gap-4">
-<!-- Active Mode: Offline Match -->
-<button class="group relative w-full text-left bg-primary p-6 transition-all active:scale-95 duration-75 ease-out">
-<div class="absolute top-0 right-0 p-4">
-<span class="material-symbols-outlined text-on-primary text-4xl opacity-20" data-icon="cloud_off">cloud_off</span>
-</div>
-<p class="font-headline text-on-primary font-black uppercase tracking-widest text-xs mb-1">Recommended</p>
-<h3 class="text-3xl font-headline font-black text-on-primary uppercase italic">Offline Match</h3>
-<p class="text-on-primary/80 font-body text-sm mt-2 font-medium">Data-Free Mode. Local play against AI or friends.</p>
-<div class="mt-4 flex gap-2">
-<span class="bg-on-primary text-primary px-2 py-0.5 text-[10px] font-bold uppercase">No Latency</span>
-<span class="bg-on-primary text-primary px-2 py-0.5 text-[10px] font-bold uppercase">Training Ready</span>
-</div>
-</button>
-<!-- Online Division -->
-<button class="group relative w-full text-left bg-surface-container-low p-6 transition-all hover:bg-surface-container-high active:scale-95 duration-75 ease-out">
-<div class="absolute top-0 right-0 p-4">
-<span class="material-symbols-outlined text-on-surface-variant text-4xl opacity-20" data-icon="public">public</span>
-</div>
-<h3 class="text-2xl font-headline font-bold text-on-surface uppercase italic">Online Division</h3>
-<p class="text-on-surface-variant font-body text-sm mt-1">Climb the global ranks. Real-time PvP.</p>
-</button>
-</div>
-<!-- Bento-style Stats Grid -->
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-surface-container-high/40 backdrop-blur-md p-4">
-<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Win Rate</p>
-<p class="text-2xl font-headline font-black text-primary">68%</p>
-</div>
-<div class="bg-surface-container-high/40 backdrop-blur-md p-4">
-<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-1">Top Streak</p>
-<p class="text-2xl font-headline font-black text-on-surface">12 WINS</p>
-</div>
-</div>
-</section>
-<!-- Center/Right: Team & Settings Canvas -->
-<section class="lg:col-span-8 space-y-8">
-<!-- Team Selection UI -->
-<div class="bg-surface-container-low/80 backdrop-blur-2xl p-8 shadow-2xl relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent"></div>
-<div class="flex items-center justify-between gap-8">
-<!-- Home Team -->
-<div class="flex-1 flex flex-col items-center text-center group cursor-pointer">
-<div class="w-32 h-32 mb-4 bg-surface-container-high rounded-sm flex items-center justify-center group-hover:scale-105 transition-transform">
-<img alt="Club Logo" class="w-24 h-24 object-contain" data-alt="Minimalist graphic representation of a high-end football club crest with gold and navy blue elements on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4VmM6baDSxqHgOwkaGCOm0q8x6CYaIE3ucUAX9l4iRRwoucXFUsYnoIPwAPvQn8WQiiXEO1i7wx_U5iELWhZTSdCjSjABlzUNZVM_rW-TPEqjJpYS0rtCuT52nGHfsk4HlFQU92UlZ598UB4cFLlbONYu6WT9KH4aeo4rE8uPT1wyXdtGq93KgPgMaxQtX79VHtfPHLQ5NzKefJH5g0boihvxG7KObOsiGqc29Zh2ypZfE1oNZVHMBi2yPHLvvVW-sLXe-ouXwRw"/>
-</div>
-<h4 class="font-headline font-black text-2xl uppercase tracking-tighter italic">Manchester Blue</h4>
-<p class="text-[10px] text-primary font-black tracking-widest mt-1">HOME TEAM</p>
-</div>
-<!-- VS Divider -->
-<div class="flex flex-col items-center">
-<span class="text-4xl font-headline font-black italic text-primary/40">VS</span>
-<div class="h-16 w-[2px] bg-gradient-to-b from-primary/50 to-transparent my-2"></div>
-</div>
-<!-- Away Team -->
-<div class="flex-1 flex flex-col items-center text-center group cursor-pointer">
-<div class="w-32 h-32 mb-4 bg-surface-container-high rounded-sm flex items-center justify-center group-hover:scale-105 transition-transform">
-<img alt="Away Club Logo" class="w-24 h-24 object-contain" data-alt="Dynamic modern football club badge with red and white geometric patterns and a sharp shield shape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU9srRsAW5uKKto2_jP-cSCdBwnZ48Ikqp6NWu2qiBX_z3zOn6T4sudlBSNDsGlrmIur3nCQKkDOk1uGEXcy0O2rsfTq29Inq6JIoBa6P7ktYb-xHRylcIX8QgpM7qEDhi2cEvexwDyDcN44xw6Mve79PLWb1F8NvgUT2mjQCwOTmTYaLZAP2UDjq9spy4vsnfoGwaJ8Wy8BhohHYuXlTk1VSvWnEGqY_g7qwnMmzQ2mdkfJAnaPR3Kr70Go5_AYnvdSiCVePVUi0"/>
-</div>
-<h4 class="font-headline font-black text-2xl uppercase tracking-tighter italic">Madrid White</h4>
-<p class="text-[10px] text-on-surface-variant font-black tracking-widest mt-1">AWAY TEAM</p>
-</div>
-</div>
-</div>
-<!-- Match Settings Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Duration -->
-<div class="bg-surface-container-high p-6 group cursor-pointer hover:bg-surface-bright transition-colors">
-<div class="flex justify-between items-start mb-4">
-<span class="material-symbols-outlined text-primary" data-icon="timer">timer</span>
-<span class="text-[10px] font-black text-primary bg-primary-container px-2 py-0.5">MANUAL</span>
-</div>
-<p class="font-headline font-bold text-on-surface-variant uppercase text-xs tracking-widest mb-1">Duration</p>
-<p class="text-2xl font-headline font-black uppercase">10 Minutes</p>
-</div>
-<!-- Difficulty -->
-<div class="bg-surface-container-high p-6 group cursor-pointer hover:bg-surface-bright transition-colors">
-<div class="flex justify-between items-start mb-4">
-<span class="material-symbols-outlined text-primary" data-icon="sports_esports">sports_esports</span>
-</div>
-<p class="font-headline font-bold text-on-surface-variant uppercase text-xs tracking-widest mb-1">Difficulty</p>
-<p class="text-2xl font-headline font-black uppercase text-primary">Superstar</p>
-</div>
-<!-- Commentary -->
-<div class="bg-surface-container-high p-6 group cursor-pointer hover:bg-surface-bright transition-colors">
-<div class="flex justify-between items-start mb-4">
-<span class="material-symbols-outlined text-primary" data-icon="record_voice_over">record_voice_over</span>
-</div>
-<p class="font-headline font-bold text-on-surface-variant uppercase text-xs tracking-widest mb-1">Commentary</p>
-<p class="text-lg font-headline font-black uppercase leading-tight">Peter Drury <span class="text-xs font-medium text-on-surface-variant block">(English)</span></p>
-</div>
-</div>
-<!-- Stadium / Extra Info -->
-<div class="flex flex-col md:flex-row gap-6">
-<div class="flex-1 bg-surface-container-low p-6 border-l-4 border-primary">
-<div class="flex items-center gap-4">
-<div class="p-3 bg-surface-container-high">
-<span class="material-symbols-outlined text-on-surface" data-icon="stadium">stadium</span>
-</div>
-<div>
-<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Venue</p>
-<p class="font-headline font-bold uppercase">The Grand Arena, Manchester</p>
-</div>
-</div>
-</div>
-<div class="flex-1 bg-surface-container-low p-6 border-l-4 border-on-surface-variant">
-<div class="flex items-center gap-4">
-<div class="p-3 bg-surface-container-high">
-<span class="material-symbols-outlined text-on-surface" data-icon="wb_sunny">wb_sunny</span>
-</div>
-<div>
-<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Weather</p>
-<p class="font-headline font-bold uppercase">Night / Clear Skies</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Action Button -->
-<div class="flex justify-end pt-4">
-<button class="bg-primary text-on-primary font-headline font-black uppercase italic tracking-widest text-2xl px-12 py-5 flex items-center gap-4 hover:shadow-[0_0_40px_rgba(171,214,0,0.3)] transition-all active:scale-95">
-                        Kick Off
-                        <span class="material-symbols-outlined text-3xl" data-icon="arrow_forward">arrow_forward</span>
-</button>
-</div>
-</section>
-</div>
-</main>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-20 px-2 pb-safe bg-[#1a1c1e] shadow-2xl">
-<button class="flex flex-col items-center justify-center text-[#e2e2e5]/50 w-full hover:text-[#abd600] transition-colors">
-<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-widest">Home</span>
-</button>
-<button class="flex flex-col items-center justify-center text-[#e2e2e5]/50 w-full hover:text-[#abd600] transition-colors">
-<span class="material-symbols-outlined mb-1" data-icon="groups">groups</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-widest">Squad</span>
-</button>
-<button class="flex flex-col items-center justify-center text-[#abd600] bg-[#161e00] rounded-sm pt-1 w-full border-t-2 border-[#abd600] transition-all duration-150 ease-in-out">
-<span class="material-symbols-outlined mb-1" data-icon="sports_soccer">sports_soccer</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-widest">Matches</span>
-</button>
-<button class="flex flex-col items-center justify-center text-[#e2e2e5]/50 w-full hover:text-[#abd600] transition-colors">
-<span class="material-symbols-outlined mb-1" data-icon="shopping_cart">shopping_cart</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-widest">Shop</span>
-</button>
-<button class="flex flex-col items-center justify-center text-[#e2e2e5]/50 w-full hover:text-[#abd600] transition-colors">
-<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
-<span class="font-['Inter'] text-[10px] uppercase font-bold tracking-widest">Settings</span>
-</button>
-</nav>
-</body></html>
+        header {
+            background: #0047AB;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            position: relative;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #0047AB;
+            top: 100%;
+            left: 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 0.5rem;
+        }
+        section {
+            padding: 2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: auto;
+        }
+        input, select, textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 0.7rem;
+            background: #0047AB;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .gallery {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minyong City Model Schools</h1>
+        <nav>
+            <div class="dropdown">
+                <a href="                
+                <div class="dropdown-content">
+                    <a href="#portal">Student Portal</a>
+                    <a href="                           
+                    <a href="#records">View Records</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="                 
+                <div class="dropdown-content">
+                    <a href="#admission">Apply Now</a>
+                    <a href="                               
+                </div>
+            </div>
+            <a href="#gallery">Gallery</a>
+            <a href="                 
+        </nav>
+    </header>
+
+    <section id="portal">
+        <h2>Student Portal</h2>
+        <p><a href="#">Check Results</a> | <a href="#">View Records</a></p>
+    </section>
+
+    <section id="admission">
+        <h2>Admission</h2>
+        <form>
+            <label>Full Name</label>
+            <input type="text" required>
+
+            <label>Parent/Guardian Name</label>
+            <input type="text" required>
+
+            <label>Phone Number</label>
+            <input type="tel" required>
+
+            <label>Class Applying For</label>
+            <select required>
+                <option>JSS 1</option>
+                <option>JSS 2</option>
+                <option>SSS 1</option>
+                <option>SSS 2</option>
+            </select>
+
+            <label>Message</label>
+            <textarea></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <section id="gallery">
+        <h2>School Gallery</h2>
+        <div class="gallery">
+            <img src="https:                                                  
+            <img src="https://via.placeholder.com/200x150" alt="Sports Day">
+            <img src="https:                                                       
+            <img src="https://via.placeholder.com/200x150" alt="Science Fair">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Minyong City Model Schools is a premier institution dedicated to providing quality education and fostering holistic development.</p>
+        <h3>Our Mission</h3>
+        <p>To empower students with knowledge, skills, and values for a brighter future.</p>
+        <h3>Our Vision</h3>
+        <p>To be a
+        
