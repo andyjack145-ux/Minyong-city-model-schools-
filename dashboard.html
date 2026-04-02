@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Minyong City Model Schools</title>
+    <script>
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <p>Manage admissions, results, gallery, etc.</p>
+    <form id="noticeForm">
+        <label>Send Notice:</label>
+        <input type="text" id="noticeInput">
+        <button type="submit">Send</button>
+    </form>
+
+    <div>
+        <label>Send Call/SMS:</label>
+        <input type="text" id="phoneNumber" placeholder="Phone number">
+        <button id="callBtn">Call</button>
+        <button id="smsBtn">SMS</button>
+    </div>
+
+    <button id="logoutBtn">Logout</button>
+
+    <script>
+        document.getElementById("noticeForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const notice = document.getElementById("noticeInput").value;
+            local
