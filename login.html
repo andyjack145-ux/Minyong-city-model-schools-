@@ -1,42 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Minyong City Model Schools</title>
-    <style>
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 300px;
-            margin: 2rem auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Minyong City Model Schools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #00346f;
+      --primary-dark: #004a99;
+      --surface: #f8f9fa;
+      --white: #ffffff;
+      --error: #ba1a1a;
+      --outline: #c2c6d3;
+      --font-headline: 'Manrope', sans-serif;
+      --font-body: 'Public Sans', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100dvh;
+      background: var(--surface);
+      font-family: var(--font-body);
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
+    .login-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 24px rgba(0,52,111,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .brand .material-symbols-outlined { font-size: 28px; color: var(--primary); }
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: var(--font-headline);
+    }
+    h1 {
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    label {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #424751;
+    }
+    input {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--outline);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-family: var(--font-body);
+    }
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0,52,111,0.1);
+    }
+    .btn {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--white);
+      padding: 0.875rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      font-family: var(--font-headline);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .btn:hover { transform: scale(0.98); }
+    .error {
+      color: var(--error);
+      font-size: 0.875rem;
+      text-align: center;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Admin Login</h1>
+  <div class="login-card">
+    <div class="brand">
+      <span class="material-symbols-outlined">school</span>
+      <span class="brand-name">Minyong City Model Schools</span>
+    </div>
+    <h1>Admin Login</h1>
     <form id="loginForm">
-        <label>Username:</label>
-        <input type="text" id="username" required>
-        <label>Password:</label>
-        <input type="password" id="password" required>
-        <button type="submit">Login</button>
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" required autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" required autocomplete="current-password">
+      </div>
+      <p class="error" id="error">Invalid credentials</p>
+      <button type="submit" class="btn">Login</button>
     </form>
+  </div>
 
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", (e) => {
-            e.preventDefault();
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            if (username === "admin" && password === "password123") {
-                localStorage.setItem("loggedIn", "true");
-                window.location.href = "dashboard.html";
-            } else {
-                alert("Invalid credentials!");
-            }
-        });
-    </script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const error = document.getElementById("error");
+      
+      // TODO: Replace this with a real API call
+      // Never check passwords in frontend JS for production
+      const res = await fakeApiLogin(username, password);
+      
+      if (res.success) {
+        sessionStorage.setItem("auth", res.token);
+        window.location.href = "dashboard.html";
+      } else {
+        error.style.display = "block";
+        setTimeout(() => error.style.display = "none", 3000);
+      }
+    });
+
+    // Demo function - DELETE THIS and use real backend
+    async function fakeApiLogin(user, pass) {
+      // In production: fetch('/api/login', {method: 'POST', body: JSON.stringify({user, pass})})
+      return { success: user === "admin" && pass === "password123", token: "demo-jwt" };
+    }
+  </script>
 </body>
-  </html>
-  
+    </html>
