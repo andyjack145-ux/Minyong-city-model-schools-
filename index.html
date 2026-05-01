@@ -1,70 +1,200 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link href="https:                                                                                                                                                
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <script src="https:                                                                
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                                            
-                    },
-                    fontFamily: {
-                        "headline": ["Manrope"],
-                        "body": ["Public Sans"],
-                        "label": ["Public Sans"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                },
-            },
-        }
-    </script>
-    <style>
-                               
-    </style>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Minyong City Model Schools - Admissions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-fixed">
-    <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-[0_8px_24px_rgba(0,52,111,0.06)] h-20">
-        <div class="max-w-7xl mx-auto px-8 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-blue-900" style="font-size: 28px;">school</span>
-                <span class="text-xl font-extrabold text-blue-900 tracking-tighter font-headline">Minyong City Model Schools</span>
-            </div>
-            <!-- ... (rest of your code) -->
-        </div>
-    </header>
-    <main class="pt-20">
-        <!-- Academic Hero Section -->
-        <section class="relative w-full bg-primary overflow-hidden py-24 md:py-32">
-            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-surface-tint to-transparent"></div>
-            <div class="max-w-7xl mx-auto px-8 relative z-10 flex flex-col items-start">
-                <div class="inline-block px-4 py-1 rounded-full bg-primary-container text-on-primary-container font-label text-xs font-bold tracking-widest mb-6">ADMISSIONS <span class="year-range">2024/2025</span></div>
-                <!-- ... (rest of your code) -->
-            </div>
-        </section>
-        <!-- ... (rest of your code) -->
-    </main>
+<body>
+<!-- TopAppBar -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="material-symbols-outlined">school</span>
+      <span class="brand-name">Minyong City Model Schools</span>
+    </div>
+    <nav class="nav" id="nav">
+      <a class="nav-link active" href="#">Admissions</a>
+      <a class="nav-link" href="#academics">Academics</a>
+      <a class="nav-link" href="#portal">Portal</a>
+      <a class="btn btn-primary" href="#">Student Portal</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
 
-    <script>
-        const currentYear = new Date().getFullYear();
-        document.addEventListener("DOMContentLoaded", () => {
-            const yearElements = document.querySelectorAll('.year-range');
-            yearElements.forEach(el => {
-                el.innerText = `${currentYear}/${currentYear + 1}`;
-            });
-        });
-    </script>
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge">ADMISSIONS <span id="admissionYear"></span></div>
+      <h1 class="hero-title">Start Your <span class="accent">Journey</span> with Us</h1>
+      <div class="divider"></div>
+      <p class="hero-text">
+        Join a community of excellence. We nurture global leaders through rigorous academics and character development.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-gradient">Apply Now</button>
+        <button class="btn btn-outline">View Prospectus</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN1t0M5VyLXLzvsrEwoFkD3q3bwjuq5W8cJH5av_pWqJj37qXNhnf_EXA55CmfnkrWlY4XLy4TIQkWd0WZAqGV7ZlwNzHsTRHNWVfUcpLJfWGY8EyjhtE4ERRi_N3H2MJaGZtc3DWx0NO7XVmnIPYlpZjChMHIs4JwkQr9ieL1UHq4Ddvw2P8-vltqcQSeIiBtAKNpc3LhOU1_WTxEbHYZv_BI8TRW8KynAtaoN2ybu87JMbik7AMUhPIYiJ4OGi5m4PVkLfsV-yY" 
+           alt="Prestigious stone architecture of a classic university campus building with large clock tower and green manicured lawn"/>
+    </div>
+  </section>
+
+  <!-- Requirements -->
+  <section class="section" id="requirements">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">Enrollment Essentials</span>
+          <h2 class="section-title">Requirements & Guidelines</h2>
+        </div>
+        <a class="link-arrow" href="#">
+          Download Full Guide
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="bento-grid">
+        <div class="card card-large">
+          <h3>Academic Prerequisites</h3>
+          <ul class="checklist">
+            <li><span class="material-symbols-outlined">check_circle</span>
+              <div><strong>Previous Academic Records</strong><p>Certified copies of transcripts from the last two academic years.</p></div>
+            </li>
+            <li><span class="material-symbols-outlined">check_circle</span>
+              <div><strong>Standardized Test Scores</strong><p>Valid results from the National Common Entrance Examination or equivalent.</p></div>
+            </li>
+            <li><span class="material-symbols-outlined">check_circle</span>
+              <div><strong>Recommendation Letters</strong><p>Two letters of recommendation from former teachers or school heads.</p></div>
+            </li>
+          </ul>
+          <span class="material-symbols-outlined bg-icon">assignment</span>
+        </div>
+        <div class="card card-dark">
+          <h3>Documentation</h3>
+          <p class="muted">Ensure you have digital copies of the following before starting:</p>
+          <div class="doc-list">
+            <div class="doc-item"><span class="material-symbols-outlined">badge</span>Birth Certificate</div>
+            <div class="doc-item"><span class="material-symbols-outlined">photo_camera</span>Passport Photographs</div>
+            <div class="doc-item"><span class="material-symbols-outlined">medical_information</span>Medical Fitness Report</div>
+          </div>
+          <div class="notice">
+            <p class="eyebrow">Important</p>
+            <p>All documents must be in PDF format and under 2MB.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section section-alt" id="process">
+    <div class="container">
+      <div class="section-intro">
+        <span class="eyebrow">Seamless Journey</span>
+        <h2 class="section-title">Application Process</h2>
+        <p>Following these simple steps will ensure your application is processed efficiently. Our team is here to support you at every stage.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <span class="step-num">01</span>
+            <h3>Account Creation</h3>
+            <p>Register on our student portal to create your unique application profile and receive your login credentials.</p>
+          </div>
+          <div class="timeline-icon"><span class="material-symbols-outlined">person_add</span></div>
+          <div class="timeline-media">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD06zXOA9kaFTm1yyrd-TS4_36tFSakzsnnCKpU5WAiMi6tBzTp7vUXmGgEEcsdDMt5BCQaoecN0T7uy-9hM3SJf9gp0r51RMl4NHHL5hFrWc9T4iRdrcB3UtToZhuL0N96Eiyv-LBRoupm69p4dUjlE1YSF3jWgPqEuD6mrwG8F6E6-SjZccuvtGG5uwlI5x0l03MvLDR2PIt44BL7XqKCsKv5p6nagk4leV2H8bPu6kWGo24cgiY0LoAegozsBQotA3BXnxwVJlI" 
+                 alt="Hands typing on a modern laptop keyboard in a bright minimalist office"/>
+          </div>
+        <div class="timeline-item reverse">
+          <div class="timeline-content">
+            <span class="step-num">02</span>
+            <h3>Form Submission</h3>
+            <p>Fill out the detailed application form and upload all required documents securely through the portal.</p>
+          </div>
+          <div class="timeline-icon"><span class="material-symbols-outlined">description</span></div>
+          <div class="timeline-media">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUZ4c7OKsips-_Abz_hvkVvXiZ2-SnLkUf_hrTt4eE2Gew6ZS_jZLxbrWHqtB7eQ3I1oFUJyDcAvaZbpcltqVKsAKk-9XyWJcIjRFVfEZY2rf7hf24uTA0xPno9xMMyhfUXKzDj0yepTu8qZtdMxiELC0rYGYyK7Dl5tiLpF52NveftP9Rw04qtKE9NsV6aKv8F6jzby9r0ETSmalqV-0lXV4fOhGTCJr1bIeCmdb5Qe0wN8OSIQyNzIUX_LxhR8oS1NYzquhf8KA" 
+                 alt="Person signing official documents with a fountain pen on a clean white desk"/>
+          </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <span class="step-num">03</span>
+            <h3>Entrance Assessment</h3>
+            <p>Shortlisted candidates will be invited for an aptitude test and a friendly interview with our academic panel.</p>
+          </div>
+          <div class="timeline-icon"><span class="material-symbols-outlined">quiz</span></div>
+          <div class="timeline-media">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUPWxQ6qQ1EeqcsqC0NmMVVEZv5zwu60pwcU3xc0NrBNwG-NX2x5Xw4uakNQUhYo8ocp_MAT6T1m3Xb3-G696qnNdHy-cxN45Pv25sJhCYw4mIeRPwdmLULgR5YWBAGUJG338LJe_-0JhzIuVgS1z8tYWugDL9rjKGBbiM1YWQjb73MX6_PEZ4WAsO77gLcjJR8AaYAUjf3_IESk2asXZOowFbKSQZH4AQ8CW3uEl73ovR44o6gL7tadb-fvyfWQzRMNEc4Nt-2cY" 
+                 alt="Group of students focused on writing an exam in a clean modern classroom"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box">
+        <span class="material-symbols-outlined bg-icon">school</span>
+        <h2>Ready to shape your future?</h2>
+        <p>Applications are now open for the <span id="academicYear"></span> academic session. Secure your spot in the school of the future.</p>
+        <div class="cta-actions">
+          <button class="btn btn-light">Apply Now</button>
+          <a class="link-light" href="#">
+            Track Admission Status
+            <span class="material-symbols-outlined">chevron_right</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">Minyong City Model Schools</div>
+      <p>© <span id="currentYear"></span> Minyong City Model Schools. Empowering Excellence, One Student at a Time.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Admissions</a>
+      <a href="#">Academics</a>
+      <a href="#">Student Portal</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<button class="fab" aria-label="Apply now">
+  <span class="material-symbols-outlined">edit_note</span>
+</button>
+
+<script>
+// Auto-updating years
+const year = new Date().getFullYear();
+document.getElementById('currentYear').textContent = year;
+document.getElementById('admissionYear').textContent = `${year}/${year+1}`;
+document.getElementById('academicYear').textContent = year;
+
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+</script>
 </body>
-  </html>
-      
+    </html>
